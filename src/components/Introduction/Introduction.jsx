@@ -17,7 +17,7 @@ const Introduction = () => (
                             <div className='col-md-12 section-title'>
                                 <h2><span className="first-word">Acerca del</span> <span className="last-word">musical</span></h2>
                             </div>
-                            <h4 class="text-blk description">José el Soñador” es un recuento musical moderno de la historia de José; un soñador que sobrepasó sus circunstancias por no perder su fe. A través de este musical deseamos presentar un mensaje lleno de alternativas ante la problemática social existente en Puerto Rico.
+                            <h4 class="text-blk description">"José el Soñador” es un recuento musical moderno de la historia de José; un soñador que sobrepasó sus circunstancias por no perder su fe. A través de este musical deseamos presentar un mensaje lleno de alternativas ante la problemática social existente en Puerto Rico.
 
                                 Tales como violencia entre familia, incomprensión y falta de perdón entre los miembros.
                             </h4>
