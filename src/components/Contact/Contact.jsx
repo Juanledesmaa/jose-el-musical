@@ -50,20 +50,19 @@ const Contact = () => (
                                     </div>
                                 </Form> */}
 
-<form name="contact" method="POST" data-netlify="true">
+<form name="Solicitar Tickets" method="POST" data-netlify="true">
+    <input type="hidden" name="Solicitar Tickets" value="contact" />
+    <label htmlFor="name">Name</label> <br />
+    <input type="text" id="name" name="name" required /> <br />
 
-<label htmlFor="name">Name</label> <br />
-<input type="text" id="name" name="name" required />
+    <label htmlFor="email">Email</label> <br />
+    <input type="email" id="email" name="email" required /> <br />
 
-<label htmlFor="email">Email</label> <br />
-<input type="email" id="email" name="email" required />
+    <label htmlFor="message">Message</label> <br />
+    <textarea id="message" name="message" required /> <br />
 
-<label htmlFor="message">Message</label> <br />
-<textarea id="message" name="message" required />
-
-<input type="submit" value="Submit message" />
-
-</form>
+    <input type="submit" value="Submit message" />
+  </form>
                             </div>
                         </Col>
                     </Row>
