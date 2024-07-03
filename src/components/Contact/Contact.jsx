@@ -26,7 +26,7 @@ const Contact = () => {
         )
         .then(
           (result) => {
-            setStateMessage('¡Tu mensaje ha sido enviado exitosamente! Si tienes alguna consulta adicional, ¡puedes llamarnos al: 939-484-9396!');
+            setStateMessage('¡Tu mensaje ha sido enviado exitosamente! Si tienes alguna consulta adicional, puedes llamarnos al: 939-484-9396');
             setIsSubmitting(false);
             scroller.scrollTo('succesMessageScrollElement', {
                 duration: 100,
