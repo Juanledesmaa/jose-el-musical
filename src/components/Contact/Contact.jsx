@@ -19,6 +19,7 @@ const Contact = () => (
                                 <h2><span className="first-word">¡Separa tus</span> <span className="last-word">Boletos!</span></h2>
 
                                 <Form name="Contacto" method="POST" data-netlify="true" netlify>
+                                    <input type="hidden" name="form-name" value="contact"></input>
                                     <Form.Group className="mb-3" controlId="formFirstName">
                                         <Form.Label><h3>Nombre</h3></Form.Label>
                                         <Form.Control size="lg" type="text" placeholder="Tu nombre" name="Nombre" />
