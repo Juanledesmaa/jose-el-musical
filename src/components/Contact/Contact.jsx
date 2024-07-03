@@ -1,7 +1,7 @@
 import React from "react";
 import { Parallax } from 'react-parallax';
-// import Button from "react-bootstrap/Button";
-// import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/Form';
 import background from "../../img/parallax_background_protagonists_3.jpg";
 import { Col, Row } from 'react-bootstrap';
 import { Element } from 'react-scroll';
@@ -18,23 +18,23 @@ const Contact = () => (
                             <div className="content-box">
                                 <h2><span className="first-word">¡Separa tus</span> <span className="last-word">Boletos!</span></h2>
 
-                                {/* <Form name="solicitar-tickets" netlify>
+                                <Form name="Contacto" method="POST" data-netlify="true" netlify>
                                     <Form.Group className="mb-3" controlId="formFirstName">
                                         <Form.Label><h3>Nombre</h3></Form.Label>
-                                        <Form.Control size="lg" type="text" placeholder="Tu nombre" />
+                                        <Form.Control size="lg" type="text" placeholder="Tu nombre" name="Nombre" />
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formLastName">
                                         <Form.Label><h3>Apellido</h3></Form.Label>
-                                        <Form.Control size="lg" type="text" placeholder="Apellido" />
+                                        <Form.Control size="lg" type="text" placeholder="Apellido" name="Apellido" />
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label><h3>Email</h3></Form.Label>
-                                        <Form.Control size="lg" type="email" placeholder="Ingresar Email" />
+                                        <Form.Control size="lg" type="email" placeholder="Ingresar Email" name="Email" />
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="formTickets">
                                         <Form.Label><h3>Cantidad de tickets:</h3></Form.Label>
-                                        <Form.Select aria-label="Numero de tickets:">
+                                        <Form.Select aria-label="Numero de tickets:" name="tickets">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -48,19 +48,7 @@ const Contact = () => (
                                             Enviar solicitud
                                         </Button>
                                     </div>
-                                </Form> */}
-
-                            <form name="contact" netlify>
-                            <p>
-                                <label>Name <input type="text" name="name" /></label>
-                            </p>
-                            <p>
-                                <label>Email <input type="email" name="email" /></label>
-                            </p>
-                            <p>
-                                <button type="submit">Send</button>
-                            </p>
-                            </form>
+                                </Form>
                             </div>
                         </Col>
                     </Row>
