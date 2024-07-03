@@ -1,7 +1,7 @@
 import React from "react";
 import { Parallax } from 'react-parallax';
-import Button from "react-bootstrap/Button";
-import Form from 'react-bootstrap/Form';
+// import Button from "react-bootstrap/Button";
+// import Form from 'react-bootstrap/Form';
 import background from "../../img/parallax_background_protagonists_3.jpg";
 import { Col, Row } from 'react-bootstrap';
 import { Element } from 'react-scroll';
