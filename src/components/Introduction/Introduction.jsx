@@ -5,7 +5,6 @@ import { Row, Col } from 'react-bootstrap';
 //include images into your bundle
 import './Introduction.scss';
 import background from "../../img/parallax_background_protagonists_2.jpg";
-import localidad from "../../img/localidad.jpg";
 
 //create your first component
 const Introduction = () => (
