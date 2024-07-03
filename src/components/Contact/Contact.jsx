@@ -18,8 +18,7 @@ const Contact = () => (
                             <div className="content-box">
                                 <h2><span className="first-word">¡Separa tus</span> <span className="last-word">Boletos!</span></h2>
 
-                                <Form name="Contacto" data-netlify="true" netlify>
-                                    <input type="hidden" name="form-name" value="contact"></input>
+                                {/* <Form name="Contacto" action="https://nocodeform.io/f/6685d27a21b877654283571c" method="POST">
                                     <Form.Group className="mb-3" controlId="formFirstName">
                                         <Form.Label><h3>Nombre</h3></Form.Label>
                                         <Form.Control size="lg" type="text" placeholder="Tu nombre" name="Nombre" />
@@ -49,7 +48,22 @@ const Contact = () => (
                                             Enviar solicitud
                                         </Button>
                                     </div>
-                                </Form>
+                                </Form> */}
+
+<form name="contact" method="POST" data-netlify="true">
+
+<label htmlFor="name">Name</label> <br />
+<input type="text" id="name" name="name" required />
+
+<label htmlFor="email">Email</label> <br />
+<input type="email" id="email" name="email" required />
+
+<label htmlFor="message">Message</label> <br />
+<textarea id="message" name="message" required />
+
+<input type="submit" value="Submit message" />
+
+</form>
                             </div>
                         </Col>
                     </Row>
