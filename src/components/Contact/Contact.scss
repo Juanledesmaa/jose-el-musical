@@ -19,7 +19,7 @@
 
         .content-box {
             background-color: $white; /* White background */
-            margin:  60px 20px; /* Centering with 20px margin on top and bottom */
+            margin:  100px 20px; /* Centering with 20px margin on top and bottom */
             padding: 20px; /* Padding inside the container */
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
@@ -38,6 +38,9 @@
             }
         }
 
+    }
+
+    .react-parallax-bgimage {
     }
 
 }

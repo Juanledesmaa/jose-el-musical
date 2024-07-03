@@ -68,39 +68,15 @@
     "Services": [
       {
         "icon": "fa fa-wordpress",
-        "title": "Personaje1",
-        "text": "José el Soñador es el hijo favorito de Jacob, famoso por sus sueños proféticos. Vendido como esclavo por sus celosos hermanos, llega a ser el segundo al mando en Egipto, gracias a su habilidad para interpretar sueños, y finalmente salva a su familia de una hambruna.",
+        "title": "José",
+        "text": "José, un joven soñador pero un poco altivo por el trato que le daba su padre Jacob en comparación a sus otros hermanos. Fue traicionado a causa de la envidia y durante su proceso de soledad y angustia, descubre el plan de Dios para su vida y familia.",
         "image": "image1"
       },
       {
         "icon": "fa fa-wordpress",
-        "title": "Personaje1",
-        "text": "José el Soñador es el hijo favorito de Jacob, famoso por sus sueños proféticos. Vendido como esclavo por sus celosos hermanos, llega a ser el segundo al mando en Egipto, gracias a su habilidad para interpretar sueños, y finalmente salva a su familia de una hambruna.",
-        "image": "image1"
-      },
-      {
-        "icon": "fa fa-wordpress",
-        "title": "Personaje1",
-        "text": "José el Soñador es el hijo favorito de Jacob, famoso por sus sueños proféticos. Vendido como esclavo por sus celosos hermanos, llega a ser el segundo al mando en Egipto, gracias a su habilidad para interpretar sueños, y finalmente salva a su familia de una hambruna.",
-        "image": "image1"
-      },
-      {
-        "icon": "fa fa-wordpress",
-        "title": "Personaje1",
-        "text": "José el Soñador es el hijo favorito de Jacob, famoso por sus sueños proféticos. Vendido como esclavo por sus celosos hermanos, llega a ser el segundo al mando en Egipto, gracias a su habilidad para interpretar sueños, y finalmente salva a su familia de una hambruna.",
-        "image": "image1"
-      },
-      {
-        "icon": "fa fa-wordpress",
-        "title": "Personaje1",
-        "text": "José el Soñador es el hijo favorito de Jacob, famoso por sus sueños proféticos. Vendido como esclavo por sus celosos hermanos, llega a ser el segundo al mando en Egipto, gracias a su habilidad para interpretar sueños, y finalmente salva a su familia de una hambruna.",
-        "image": "image1"
-      },
-      {
-        "icon": "fa fa-wordpress",
-        "title": "Personaje1",
-        "text": "José el Soñador es el hijo favorito de Jacob, famoso por sus sueños proféticos. Vendido como esclavo por sus celosos hermanos, llega a ser el segundo al mando en Egipto, gracias a su habilidad para interpretar sueños, y finalmente salva a su familia de una hambruna.",
-        "image": "image1"
+        "title": "Benjamín",
+        "text": "Benjamín, hermano menor de José, se encarga, durante todo el musical, de narrar la fascinante historia de traición, perdón y restauración entre su familia, gracias al plan divino de Dios.",
+        "image": "image2"
       }
     ],
     "Testimonials": [

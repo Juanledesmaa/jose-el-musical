@@ -1,33 +1,44 @@
 @import '../../styles/imports';
 
 .banner {
+
+    @keyframes slideInFromTop {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
     section {
         overflow: hidden;
         position: relative;
+
 
         .shadow-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 30%; // Adjust height to control the size of the shadow
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            height: 40%; // Adjust height to control the size of the shadow
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
             pointer-events: none; // Allow clicks to pass through to the banner
         }
 
         .bg-banner {
             max-width: 100%;
             width: 100%;
-            height: auto;
             object-fit: cover;
             z-index: -1;
-            display: block;
+            object-position: top;
         }
 
         .button-container {
             position: absolute;
-            bottom: 10px;
-            padding: 0 50px;
+            bottom: 20px;
             width: 100% !important;
 
             .btn {
@@ -37,6 +48,10 @@
                 justify-content: center;
                 border-radius: 30px;
                 border-color: transparent;
+                background-color: $primary-color;
+                font-size: 24px;
+                text-transform: uppercase;
+                font-weight: bold;
 
                 h3 {
                     margin: 0 !important;
@@ -53,11 +68,74 @@
                 }
             }
         }
-    }
 
-    @media (min-width: 1024px) {
-        section {
-            max-height: 80vh;
+        .title-container {
+            position: absolute;
+            bottom: 40px;
+            padding: 0 50px;
+            width: 100% !important;
+
+            .title-image {
+                max-width: 700px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                animation: slideInFromTop 2s ease-in-out forwards;
+            }
+
+            .title-image.loaded {
+                opacity: 1;
+            }
         }
     }
+
+    @media (max-width: 768px) {
+        .video-mobile {
+            display: block;
+            max-height: 450px;
+        }
+
+        .video-desktop {
+            display: none;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .video-mobile {
+            display: none;
+        }
+
+        .video-desktop {
+            display: block;
+            max-height: 850px;
+        }
+    }
+
+    // @media (min-width: 768px) {
+    //     section {
+    //         .bg-banner {
+    //             max-height: 600px;
+    //             margin-top: -30px;
+    //         }
+    //     }
+    // }
+
+    // @media (min-width: 1024px) {
+    //     section {
+    //         .bg-banner {
+    //             max-height: 950px;
+    //             margin-top: -30px;
+    //         }
+    //     }
+    // }
+
+    // @media (min-width: 1440px) {
+    //     section {
+    //         .bg-banner {
+    //             max-height: 1400px;
+    //             margin-top: -30px;
+    //         }
+    //     }
+    // }
 }

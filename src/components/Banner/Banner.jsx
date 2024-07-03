@@ -1,48 +1,32 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import { Col, Row } from 'react-bootstrap';
-import bannerSolid from "../../img/banner_jose.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
+import titleImage from "../../img/titulos.png";
+import videoBg from "../../img/video_transicion_jose_op.mp4";
+import videoBgDesktop from "../../img/video_transicion_jose_op_desktop.mp4";
+import { Link } from 'react-scroll';
 
 import './banner.scss';
 
 const Banner = () => {
 
-    const openWhatsApp = () => {
-      const phoneNumber = "4707218124"; 
-      const message = "¡Hola! He visitado tu página web y me gustaría solicitar un servicio. ¿Podrías proporcionarme más detalles?"; // Replace with the desired message
-      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, '_blank');
-    };
-
-    const makePhoneCall = () => {
-        const phoneNumber = "4707218124";
-        window.open(`tel:${phoneNumber}`, '_self');
-      };
-  
     return (
       <div className="banner">
         <section className="d-flex align-items-center mb-0 position-relative">
-          <img src={bannerSolid} alt="" className="bg-banner" />
+          <video src={videoBg} autoPlay loop muted className="bg-banner video-mobile" />
+          <video src={videoBgDesktop} autoPlay loop muted className="bg-banner video-desktop" />
           <div className="shadow-overlay"></div>
+          <div className="title-container">
+            <Row className="justify-content-center">
+              <img src={titleImage} className="title-image" onload="this.classList.add('loaded')" alt="musical-logo" />
+            </Row>
+          </div>
           <div className="button-container">
             <Row className="justify-content-center">
-              <Col xs={6} sm={6} lg={4} xl={3} className="text-center">
-                <Button onClick={makePhoneCall} variant="primary" size="sm" block className="d-flex align-items-center justify-content-center">
-                  <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" /> Llamar
-                </Button>
-              </Col>
-              <Col xs={6} sm={6} lg={4} xl={3} className="text-center">
-                <Button 
-                  variant="secondary" 
-                  size="sm" 
-                  block 
-                  className="d-flex align-items-center justify-content-center whatsapp"
-                  onClick={openWhatsApp}
-                >
-                  <FontAwesomeIcon icon={faWhatsapp} className="mr-2" /> Whatsapp
+              <Col xs={10} sm={8} lg={6} xl={4} className="text-center">
+                <Button variant="primary" size="sm" block className="d-flex align-items-center justify-content-center">
+                <Link to="formSection" smooth={true} duration={500}>Solicitar tickets</Link>
+                  {/* <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" /> Llamar */}
                 </Button>
               </Col>
             </Row>

@@ -24,7 +24,7 @@ const App = () => {
         <Banner />
         <Introduction />
         <Services data={landingPageData.Services} />
-        <Gallery data={landingPageData.Gallery} />
+        {/* <Gallery data={landingPageData.Gallery} /> */}
         <Contact />
         <Footer />
       </div>

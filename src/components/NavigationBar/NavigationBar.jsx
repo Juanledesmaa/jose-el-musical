@@ -14,7 +14,7 @@ const NavigationBar = () => (
     <Navbar>
       <Container fluid>
         <Row className="w-100 align-items-center">
-          <Col xs={6} xl={{ span: 3, offset: 3 }} className="d-flex align-items-center">
+          <Col xs={6} className="d-flex align-items-center">
             <Navbar.Brand href="#home">
               <div className="d-flex align-items-center">
                 <img
@@ -25,11 +25,16 @@ const NavigationBar = () => (
               </div>
             </Navbar.Brand>
           </Col>
-          <Col xs={6} xl={3} className="d-flex align-items-center justify-content-end number-text">
+          <Col xs={6} className="d-flex align-items-center justify-content-end number-text">
             <Navbar.Toggle />
             <Navbar.Collapse className="d-flex align-items-center justify-content-end">
-              <FontAwesomeIcon icon={faPhone} />
-              <h3 className="icon-text">787-998-7770</h3>
+              {/* <FontAwesomeIcon icon={faPhone} />
+              <h3 className="icon-text">939-484-9396</h3> */}
+
+              <a href="tel:939-484-9396" className="custom-call-button">
+                <FontAwesomeIcon icon={faPhone} />
+                <h3 className="icon-text">939-484-9396</h3>
+              </a>
             </Navbar.Collapse>
           </Col>
         </Row>
