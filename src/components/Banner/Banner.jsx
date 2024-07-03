@@ -13,8 +13,8 @@ const Banner = () => {
     return (
       <div className="banner">
         <section className="d-flex align-items-center mb-0 position-relative">
-          <video src={videoBg} autoPlay loop muted className="bg-banner video-mobile" />
-          <video src={videoBgDesktop} autoPlay loop muted className="bg-banner video-desktop" />
+          <video src={videoBg} autoPlay loop muted playsInline className="bg-banner video-mobile" />
+          <video src={videoBgDesktop} autoPlay loop muted playsInline className="bg-banner video-desktop" />
           <div className="shadow-overlay"></div>
           <div className="title-container">
             <Row className="justify-content-center">
