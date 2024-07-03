@@ -1,14 +1,62 @@
 import React from "react";
 import { Parallax } from 'react-parallax';
-// import Button from "react-bootstrap/Button";
-// import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/Form';
 import background from "../../img/parallax_background_protagonists_3.jpg";
 import { Col, Row } from 'react-bootstrap';
-import { Element } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.scss';
 
-const Contact = () => (
-    <Element name="formSection">
+const Contact = () => {
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [stateMessage, setStateMessage] = useState(null);
+    const sendEmail = (e) => {
+      e.persist();
+      e.preventDefault();
+      setIsSubmitting(true);
+      emailjs
+        .sendForm(
+          "service_jlafxkr",
+          "template_0j3hrk8",
+          e.target,
+          "4a_udFTfxuyCqdANG"
+        )
+        .then(
+          (result) => {
+            setStateMessage('¡Tu mensaje ha sido enviado exitosamente! Si tienes alguna consulta adicional, ¡puedes llamarnos al: 939-484-9396!');
+            setIsSubmitting(false);
+            scroller.scrollTo('succesMessageScrollElement', {
+                duration: 100,
+                smooth: true,
+                offset: 50,
+              });
+            setTimeout(() => {
+              setStateMessage(null);
+            }, 15000);
+          },
+          (error) => {
+            setStateMessage('Algo salió mal, por favor inténtalo de nuevo más tarde.');
+            setIsSubmitting(false);
+            scroller.scrollTo('succesMessageScrollElement', {
+                duration: 100,
+                smooth: true,
+                offset: 50,
+              });
+            setTimeout(() => {
+              setStateMessage(null);
+            }, 10000);
+          }
+        );
+      
+      // Clears the form after sending the email
+      e.target.reset();
+    };
+
+    return (
+        <Element name="formSection">
         <div className="contact">
             <Parallax blur={{ min: -15, max: 15 }} bgImage={background} bgImageAlt="the cat" strength={-500} className="bg-banner">
                 <div className="content-contact">
@@ -18,23 +66,25 @@ const Contact = () => (
                             <div className="content-box">
                                 <h2><span className="first-word">¡Separa tus</span> <span className="last-word">Boletos!</span></h2>
 
-                                {/* <Form name="Contacto" action="https://nocodeform.io/f/6685d27a21b877654283571c" method="POST">
+                                <Form name="Contacto" onSubmit={sendEmail}>
+                                <input type="hidden" name="form-name" value="contact" />
                                     <Form.Group className="mb-3" controlId="formFirstName">
-                                        <Form.Label><h3>Nombre</h3></Form.Label>
-                                        <Form.Control size="lg" type="text" placeholder="Tu nombre" name="Nombre" />
-                                    </Form.Group>
-                                    <Form.Group className="mb-3" controlId="formLastName">
-                                        <Form.Label><h3>Apellido</h3></Form.Label>
-                                        <Form.Control size="lg" type="text" placeholder="Apellido" name="Apellido" />
+                                        <Form.Label><h3>Nombre Completo</h3></Form.Label>
+                                        <Form.Control size="lg" type="text" placeholder="Tu nombre" id="first_name" name="first_name" required />
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label><h3>Email</h3></Form.Label>
-                                        <Form.Control size="lg" type="email" placeholder="Ingresar Email" name="Email" />
+                                        <Form.Control size="lg" type="email" placeholder="Ingresar Email" id="email" name="email" required />
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                        <Form.Label><h3>Numero de Telefono:</h3></Form.Label>
+                                        <Form.Control size="lg" type="tel" placeholder="Ingresar Telefono" id="phone_number" name="phone_number" required />
                                     </Form.Group>
 
                                     <Form.Group className="mb-3" controlId="formTickets">
                                         <Form.Label><h3>Cantidad de tickets:</h3></Form.Label>
-                                        <Form.Select aria-label="Numero de tickets:" name="tickets">
+                                        <Form.Select aria-label="Numero de tickets:" id="amount_tickets" name="amount_tickets">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -44,25 +94,14 @@ const Contact = () => (
                                         </Form.Select>
                                     </Form.Group>
                                     <div className="button-container">
-                                        <Button variant="primary" type="submit">
+                                        <Button variant="primary" type="submit" value="Send" disabled={isSubmitting}>
                                             Enviar solicitud
                                         </Button>
                                     </div>
-                                </Form> */}
-
-<form name="Solicitar Tickets" method="POST" data-netlify="true">
-    <input type="hidden" name="Solicitar Tickets" value="contact" />
-    <label htmlFor="name">Name</label> <br />
-    <input type="text" id="name" name="name" required /> <br />
-
-    <label htmlFor="email">Email</label> <br />
-    <input type="email" id="email" name="email" required /> <br />
-
-    <label htmlFor="message">Message</label> <br />
-    <textarea id="message" name="message" required /> <br />
-
-    <input type="submit" value="Submit message" />
-  </form>
+                                    <Element name="succesMessageScrollElement">
+                                        {stateMessage && <p className="success-message">{stateMessage}</p>}
+                                    </Element>
+                                </Form>
                             </div>
                         </Col>
                     </Row>
@@ -71,6 +110,9 @@ const Contact = () => (
             </Parallax>
         </div>
     </Element>
-);
+    );
+
+
+};
 
 export default Contact;
