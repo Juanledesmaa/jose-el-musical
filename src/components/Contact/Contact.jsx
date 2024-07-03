@@ -18,7 +18,7 @@ const Contact = () => (
                             <div className="content-box">
                                 <h2><span className="first-word">¡Separa tus</span> <span className="last-word">Boletos!</span></h2>
 
-                                <Form name="solicitar-tickets" netlify>
+                                {/* <Form name="solicitar-tickets" netlify>
                                     <Form.Group className="mb-3" controlId="formFirstName">
                                         <Form.Label><h3>Nombre</h3></Form.Label>
                                         <Form.Control size="lg" type="text" placeholder="Tu nombre" />
@@ -48,7 +48,19 @@ const Contact = () => (
                                             Enviar solicitud
                                         </Button>
                                     </div>
-                                </Form>
+                                </Form> */}
+
+                            <form name="contact" netlify>
+                            <p>
+                                <label>Name <input type="text" name="name" /></label>
+                            </p>
+                            <p>
+                                <label>Email <input type="email" name="email" /></label>
+                            </p>
+                            <p>
+                                <button type="submit">Send</button>
+                            </p>
+                            </form>
                             </div>
                         </Col>
                     </Row>
