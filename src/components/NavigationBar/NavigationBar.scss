@@ -1,0 +1,62 @@
+@import '../../styles/imports';
+
+.navigationBar {
+    z-index: 1000;
+    .navbar {
+        background-color: $primary-color;
+        z-index: 1000;
+
+        h3 {
+            margin: 0;
+            font-size: 14px;
+            color: $secondary-color;
+
+            // Style the last word (Taxi)
+            span.last-word {
+                color: $primary-color;
+                margin-left: -4px;
+            }
+
+            &.icon-text {
+                margin-top: 0px;
+                color: $secondary-color;
+            }
+        }
+
+        img {
+            height: 40px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .svg-inline--fa {
+            margin-right: 5px;
+            color: $secondary-color;
+        }
+
+        .number-text {
+            padding-right: 0px;
+        }
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) { 
+        /* Safari only override */
+        ::i-block-chrome, h3 .icon-text {
+            margin-top: 0px !important;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h3 {
+            font-size: 32px !important;
+        }
+
+        .svg-inline--fa {
+            font-size: 32px !important;
+        }
+
+        img {
+            height: 60px !important;
+        }
+    }
+}
