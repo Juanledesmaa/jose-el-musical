@@ -5,7 +5,6 @@ import Banner from './Banner/Banner';
 import NavigationBar from './NavigationBar/NavigationBar';
 import Introduction from './Introduction/Introduction';
 import Services from './About/Services';
-import Gallery from './Gallery/Gallery';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import JsonData from '../data/data.json';
