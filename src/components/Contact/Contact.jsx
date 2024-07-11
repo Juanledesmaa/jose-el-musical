@@ -70,7 +70,7 @@ const Contact = ({ setModalShow }) => {
                         <Col xs={12} sm={10} md={8} lg={6}>
                             <div className="content-box">
                                 <h2><span className="first-word">¡Separa tus</span> <span className="last-word">Boletos!</span></h2>
-                                <h3 className="mb-5">Los boletos para la primera función están agotados. ¡Pero tenemos buenas noticias! Hemos añadido una segunda función para el mismo día a las 7:30 p.m.</h3>
+                                <h3 className="mb-5">Los boletos para la primera función están agotados. ¡Pero tenemos buenas noticias! Hemos añadido una segunda función para el mismo día a las 7:00 p.m.</h3>
                                 <h3 className="mb-2">Para tu comodidad, puedes realizar tu pago por ATH Móvil a:</h3>
 
                                 <Image className='mb-5 mr-2 ml-2' src={donativo} fluid />
