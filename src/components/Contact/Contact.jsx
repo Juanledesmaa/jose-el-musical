@@ -29,19 +29,13 @@ const Contact = ({ setModalShow }) => {
         )
         .then(
           (result) => {
-            setStateMessage('¡Tu mensaje ha sido enviado exitosamente! Si tienes alguna consulta adicional, puedes llamarnos al: 939-484-9396');
-            setModalShow(true);
+            setStateMessage('¡Tu solicitud ha sido enviado exitosamente! Si tienes alguna consulta adicional, puedes llamarnos al: 939-484-9396');
             setIsSubmitting(false);
-            scroller.scrollTo('succesMessageScrollElement', {
-                duration: 100,
-                smooth: true,
-                offset: 50,
-              });
 
-            setModalShow(true)
             setTimeout(() => {
               setStateMessage(null);
             }, 15000);
+            setModalShow(true);
           },
           (error) => {
             setStateMessage('Algo salió mal, por favor inténtalo de nuevo más tarde.');
