@@ -22,9 +22,13 @@ const Introduction = () => (
                                 Tales como violencia entre familia, incomprensión y falta de perdón entre los miembros.
                             </h4>
 
-                            <h2 className="date-text">Domingo, 25 de agosto 2024</h2>
-                            <h2 className="date-text">2:30pm</h2>
-                            <h2 className="date-text mb">Performing Arts Center, Tasis, Dorado, PR</h2>
+                            <h2 className="date-text mb-4">Domingo, 25 de agosto 2024</h2>
+                            <h2 className="date-text mb-4">1era función: <span className="time">2:30pm</span></h2>
+                            <h2 className="date-text mb-4">2da función: <span className="time">7:00pm</span></h2>
+                            <h2 className="date-text mb-4">Costo: <span className="time">$30</span></h2>
+                            <h2 className="date-text gold mb-4">Performing Arts Center, Tasis, Dorado, PR</h2>
+
+                            {/* <img src={donativo} alt="" /> */}
 
                             <div className='col-md-12 section-title'>
                                 <h2><span className="last-word smaller">El musical constará de:</span></h2>

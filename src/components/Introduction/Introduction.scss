@@ -31,6 +31,14 @@
             &.mb {
                 margin-bottom: 40px;
             }
+
+            &.gold {
+                color: $secondary-color;
+            }
+
+            .time {
+                color: $primary-color;
+            }
         }
 
         .title {
