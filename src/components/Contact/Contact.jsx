@@ -7,9 +7,12 @@ import { Col, Row } from 'react-bootstrap';
 import { Element, scroller } from 'react-scroll';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Image } from 'react-bootstrap';
 import './Contact.scss';
 
-const Contact = () => {
+import donativo from '../../img/donativo_done.png';
+
+const Contact = ({ setModalShow }) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [stateMessage, setStateMessage] = useState(null);
@@ -27,12 +30,15 @@ const Contact = () => {
         .then(
           (result) => {
             setStateMessage('¡Tu mensaje ha sido enviado exitosamente! Si tienes alguna consulta adicional, puedes llamarnos al: 939-484-9396');
+            setModalShow(true);
             setIsSubmitting(false);
             scroller.scrollTo('succesMessageScrollElement', {
                 duration: 100,
                 smooth: true,
                 offset: 50,
               });
+
+            setModalShow(true)
             setTimeout(() => {
               setStateMessage(null);
             }, 15000);
@@ -50,8 +56,7 @@ const Contact = () => {
             }, 10000);
           }
         );
-      
-      // Clears the form after sending the email
+
       e.target.reset();
     };
 
@@ -65,7 +70,11 @@ const Contact = () => {
                         <Col xs={12} sm={10} md={8} lg={6}>
                             <div className="content-box">
                                 <h2><span className="first-word">¡Separa tus</span> <span className="last-word">Boletos!</span></h2>
+                                <h3 className="mb-5">Los boletos para la primera función están agotados. ¡Pero tenemos buenas noticias! Hemos añadido una segunda función para el mismo día a las 7:30 p.m.</h3>
+                                <h3 className="mb-2">Para tu comodidad, puedes realizar tu pago por ATH Móvil a:</h3>
 
+                                <Image className='mb-5 mr-2 ml-2' src={donativo} fluid />
+                               
                                 <Form name="Contacto" onSubmit={sendEmail}>
                                 <input type="hidden" name="form-name" value="contact" />
                                     <Form.Group className="mb-3" controlId="formFirstName">

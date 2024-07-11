@@ -4,6 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 import titleImage from "../../img/titulos.png";
 import videoBg from "../../img/video_transicion_jose_op.mp4";
 import videoBgDesktop from "../../img/video_transicion_jose_op_desktop.mp4";
+import MarqueeBanner from "../MarqueeBanner/MarqueeBanner";
 import { Link } from 'react-scroll';
 
 import './banner.scss';
@@ -25,12 +26,12 @@ const Banner = () => {
             <Row className="justify-content-center">
               <Col xs={10} sm={8} lg={6} xl={4} className="text-center">
                 <Button variant="primary" size="sm" block className="d-flex align-items-center justify-content-center">
-                <Link to="formSection" smooth={true} duration={500}>Solicitar tickets</Link>
-                  {/* <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" /> Llamar */}
+                <Link to="formSection" smooth={true} duration={500}>Reservar tickets<br /> <span className="smaller">Segunda función</span></Link>
                 </Button>
               </Col>
             </Row>
           </div>
+          <MarqueeBanner></MarqueeBanner>
         </section>
       </div>
     );
