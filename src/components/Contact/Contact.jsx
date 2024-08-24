@@ -2,7 +2,7 @@ import React from "react";
 import { Parallax } from 'react-parallax';
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
-import background from "../../img/parallax_background_protagonists_3.jpg";
+import background from "../../img/background-cheto.png";
 import { Col, Row } from 'react-bootstrap';
 import { Element, scroller } from 'react-scroll';
 import { useState } from 'react';
@@ -10,7 +10,7 @@ import emailjs from '@emailjs/browser';
 import { Image } from 'react-bootstrap';
 import './Contact.scss';
 
-import donativo from '../../img/donativo_done_business.png';
+import donativo from '../../img/donacion-cheto.png';
 
 const Contact = ({ setModalShow }) => {
 
@@ -57,7 +57,7 @@ const Contact = ({ setModalShow }) => {
     return (
         <Element name="formSection">
         <div className="contact">
-            <Parallax blur={{ min: -15, max: 15 }} bgImage={background} bgImageAlt="the cat" strength={-500} className="bg-banner">
+            {/* <Parallax blur={{ min: -15, max: 15 }} bgImage={background} bgImageAlt="the cat" strength={-500} className="bg-banner">
                 <div className="content-contact">
 
                     <Row className="justify-content-center">
@@ -110,7 +110,30 @@ const Contact = ({ setModalShow }) => {
                     </Row>
 
                 </div>
+            </Parallax> */}
+
+            <Parallax blur={{ min: -15, max: 15 }} bgImage={background} bgImageAlt="the cat" strength={-500} className="bg-banner">
+                <div className="content-contact">
+
+                    <Row className="justify-content-center">
+                        <Col xs={12} sm={10} md={8} lg={6}>
+                            <div className="content-box">
+                                <h2><span className="first-word">¡Dona</span> <span className="last-word">Hoy!</span></h2>
+                                <h3 className="mb-2">Todo sueño comienza con un soñador. Ayúdanos a hacer realidad nuestro nuevo templo con tu donación. Cada aporte nos acerca a cumplir este gran sueño.</h3>
+
+                                <Image className='mb-5 mr-2 ml-2' src={donativo} fluid />
+                               
+                                
+                            </div>
+                        </Col>
+                    </Row>
+
+                </div>
             </Parallax>
+
+            
+            
+
         </div>
     </Element>
     );

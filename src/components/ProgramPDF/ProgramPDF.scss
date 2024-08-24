@@ -1,0 +1,23 @@
+@import '../../styles/imports';
+
+
+.program-pdf {
+    background: #f6f6f6;
+
+    h2 {
+        color: $secondary-color;
+        padding-top: 40px;
+    }
+
+    .pdf-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;     /* Center vertically */
+        height: 100%; 
+
+        .pdf-file {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+}
