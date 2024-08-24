@@ -26,7 +26,7 @@ const Banner = () => {
             <Row className="justify-content-center">
               <Col xs={10} sm={8} lg={6} xl={4} className="text-center">
                 <Button variant="primary" size="sm" block className="d-flex align-items-center justify-content-center">
-                <Link to="formSection" smooth={true} duration={500}>Reservar tickets<br /> <span className="smaller">Segunda función</span></Link>
+                <Link to="formSection" smooth={true} duration={500}>Dona Hoy<br /> <span className="smaller">Pro-fondo nuevo templo</span></Link>
                 </Button>
               </Col>
             </Row>
