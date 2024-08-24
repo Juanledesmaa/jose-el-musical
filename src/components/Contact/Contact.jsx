@@ -2,7 +2,7 @@ import React from "react";
 import { Parallax } from 'react-parallax';
 import background from "../../img/background-cheto.png";
 import { Col, Row } from 'react-bootstrap';
-import { Element, scroller } from 'react-scroll';
+import { Element } from 'react-scroll';
 import { Image } from 'react-bootstrap';
 import './Contact.scss';
 
