@@ -17,12 +17,12 @@
             }
         }
 
+        h3 {
+           color: $secondary-color; 
+        }
+
         .content-box {
-            background-color: $white; /* White background */
-            margin:  100px 20px; /* Centering with 20px margin on top and bottom */
-            padding: 20px; /* Padding inside the container */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+            margin:  20px 20px; /* Centering with 20px margin on top and bottom */
             max-width: 100%; /* Ensures container does not exceed viewport width */
 
             form {

@@ -9,7 +9,7 @@ import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import JsonData from '../data/data.json';
 import CustomModal from './Modal/Modal';
-
+import ProgramPDF from './ProgramPDF/ProgramPDF';
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({})
@@ -23,6 +23,7 @@ const App = () => {
       <div className="text-center">
         <NavigationBar />
         <Banner />
+        <ProgramPDF />
         <Introduction />
         <Services data={landingPageData.Services} />
         {/* <Gallery data={landingPageData.Gallery} /> */}
