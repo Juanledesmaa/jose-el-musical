@@ -8,22 +8,30 @@
 
             // Style the first word (Traeme)
             span.first-word {
-                color: $secondary-color; /* Set primary color for the first word */
+                color: $secondary-color;
+                /* Set primary color for the first word */
             }
 
             // Style the last word (Taxi)
             span.last-word {
-                color: $primary-color; /* Set secondary color for the last word */
+                color: $primary-color;
+                /* Set secondary color for the last word */
             }
         }
 
         h3 {
-           color: $secondary-color; 
+            color: $secondary-color;
+
+            &.subtext {
+                font-size: 26px;
+            }
         }
 
         .content-box {
-            margin:  20px 20px; /* Centering with 20px margin on top and bottom */
-            max-width: 100%; /* Ensures container does not exceed viewport width */
+            margin: 20px 20px;
+            /* Centering with 20px margin on top and bottom */
+            max-width: 100%;
+            /* Ensures container does not exceed viewport width */
 
             form {
                 text-align: left;
@@ -31,6 +39,7 @@
 
             .button-container {
                 text-align: center;
+
                 .btn {
                     background-color: $primary-color;
                     border-color: $primary-color;
@@ -42,10 +51,12 @@
 
     .success-message {
         font-weight: bold;
-        color: #4CAF50; /* Green color for success messages */
-        padding-top: 20px; /* Optional: Add padding for better readability */
+        color: #4CAF50;
+        /* Green color for success messages */
+        padding-top: 20px;
+        /* Optional: Add padding for better readability */
         font-size: 24px;
         text-align: center;
-      }
+    }
 
 }

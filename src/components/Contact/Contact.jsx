@@ -17,10 +17,10 @@ const Contact = ({ setModalShow }) => {
                 <div className="content-contact">
 
                     <Row className="justify-content-center">
-                        <Col xs={12} sm={10} md={8} lg={6}>
+                        <Col xs={12} sm={12} md={8} lg={6}>
                             <div className="content-box">
-                                <h2><span className="first-word">¡Dona</span> <span className="last-word">Hoy!</span></h2>
-                                <h3 className="mb-2">Todo sueño comienza con un soñador. Ayúdanos a hacer realidad nuestro nuevo templo con tu donación. Cada aporte nos acerca a cumplir este gran sueño.</h3>
+                                <h2><span className="first-word">¡Dona Hoy!</span></h2>
+                                <h3 className="mb-2 subtext">Todo sueño comienza con un soñador. Ayúdanos a hacer realidad nuestro nuevo templo con tu donación. Cada aporte nos acerca a cumplir este gran sueño.</h3>
 
                                 <Image className='mb-5 mr-2 ml-2' src={donativo} fluid />
                                
